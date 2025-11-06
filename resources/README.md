@@ -5,7 +5,7 @@ Author: Kiri Wagstaff, wkiri@wkiri.com
 ## Writer Lists
 
 To enable the creation of multi-digit data sets using the QMNIST data,
-and ensure that writers can be used separately for training and test
+and to ensure that different writers are used for training and test
 data, we established standard lists of writers to be used in each
 setting, Wtr and Wte.  For full compatibility with MNIST, we
 initialized Wtr (training) and Wte (test) with the 539 and 535
