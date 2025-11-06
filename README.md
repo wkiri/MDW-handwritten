@@ -132,17 +132,23 @@ For example, a sample created for 11:59 would appear as:
 
 ## Generate Predictions on MDW Data Sets
 
-You can generate predictions for an MDW data set using the following script:
+You can generate predictions for an MDW data set that applies, to each
+digit in the multi-digit number, a single-digit classifier that was
+trained on the MNIST training set.  
 
 ```
 python3 predict_MDW_data.py <MDW_data_file> <preds_file>
 ```
 
-This script uses a support vector machine (SVM) with RBF kernel, but you can
-change this for the classifier of your choice, or use this script as a
-model for your own prediction script.
+By default, this script uses a support vector machine (SVM) with RBF
+kernel, but you can specify other classifiers with the `-c` option.
+You can also use this script as a model to write a new prediction script
+to connect to your own classifier.
 
-Predictions will be saved into a .csv file (preds_file) with one
+The first run will be slower since it must first train the
+single-digit classifier.  Subsequent runs will re-use this classifier.
+
+Predictions are saved into a .csv file (preds_file) with one
 recognized number (prediction) per line, in the same order as items in
 the MDW data file.
 
@@ -161,7 +167,7 @@ python3 eval_MDW_data.py <MDW_data_file> <preds_file> -d [zip_code,check_amount,
 Here are some example results using the scikit-learn implementation of
 a support vector machine (SVC) with RBF kernel and gamma set to
 "scale", trained on the MNIST training set (60,000 digits) and
-evaluated on 10,000 samples generated for each domain: 
+evaluated on 10,000 multi-digit samples generated for each domain: 
 
 | Data set | Strict error |
 | -------- | ------------ |
