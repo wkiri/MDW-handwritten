@@ -1,0 +1,5 @@
+*~
+.DS_Store
+data
+venv-digits
+resources/zcta5.geo.json
