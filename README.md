@@ -140,15 +140,15 @@ trained on the MNIST training set.
 python3 predict_MDW_data.py <MDW_data_file> <preds_file>
 ```
 
-By default, this script uses a support vector machine (SVM) with RBF
+* By default, this script uses a support vector machine (SVM) with RBF
 kernel, but you can specify other classifiers with the `-c` option.
 You can also use this script as a model to write a new prediction script
 to connect to your own classifier.
 
-The first run will be slower since it must first train the
+* The first run will be slower since it must first train the
 single-digit classifier.  Subsequent runs will re-use this classifier.
 
-Predictions are saved into a .csv file (preds_file) with one
+* Predictions are saved into a .csv file (preds_file) with one
 recognized number (prediction) per line, in the same order as items in
 the MDW data file.
 
