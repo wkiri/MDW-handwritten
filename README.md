@@ -178,7 +178,7 @@ data.  By default, this script uses an SVM, but you can change it as above.
 python3 exp_learning_curve.py
 ```
 
-![caption](images/learning_curve_err-SVM-trials-10.pdf)
+![caption](images/learning_curve_err-SVM-trials-10.png)
 
 <!--
   LocalWords:  MDW NIST txt py csv npz preds RBF eval scikit SVC MNIST
