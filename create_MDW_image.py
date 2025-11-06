@@ -47,6 +47,10 @@ def main(number, writer, writers_file, seed=-1):
         writer = random.choice(wtrs_te)
         print(f'Chose writer {writer}')
 
+    if number < 0:
+        print('Error: the number must be a positive integer.')
+        sys.exit(1)
+
     # Get the digit images; pass number as a string for compatibility
     X, _ = create_numeral_images(str(number), writer, lab_all, qall)
     # Some few writers do not have all digits available
