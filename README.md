@@ -9,7 +9,8 @@ multi-digit numbers.
 Each multi-digit number has a single original writer.  The multi-digit
 image is a concatenation of individual digits sampled from the full
 NIST data set of 402,953 single-digit images, while ensuring the
-digits have the same original writer.  
+digits have the same original writer.  The code uses the 28x28 version
+of each digit as provided by the QMNIST data set.
 
 Each MDW data set was inspired by a realistic use case in which
 handwritten numbers occur, such as U.S. ZIP Codes, handwritten check
@@ -32,6 +33,9 @@ To install requirements:
 ```
 pip install -r requirements.txt
 ```
+
+The first run of any script will download the QMNIST data files so
+that the NIST images are accessible.
 
 ## Generate Multi-Digit Number Image from One Writer
 
