@@ -71,6 +71,14 @@ You can generate multi-digit writer data sets for the following
 domains: U.S. ZIP Codes, handwritten check amounts, and times of day.
 Results can be stored in .csv or .npz files.
 
+Each item in a data set is represented as a list with the following
+fields:
+
+| Numeral | Writer |NIST id 0 | ... | NIST id N |
+
+for a number with N digits.  Each NIST id can be used to index into the
+QMNIST data set to obtain the corresponding 28x28 image.
+
 ### U.S. ZIP Codes
 
 U.S. ZIP Codes consist of five digits.  Only 37,988 of the 100,000
