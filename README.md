@@ -1,14 +1,22 @@
-# Handwritten Multi-Digit Writer (MDW) Number Recognition Data Sets
+# Generating Handwritten Multi-Digit Writer (MDW) Number Recognition Data Sets
+
+Author: Kiri Wagstaff, wkiri@wkiri.com 
 
 This repository contains Python scripts to generate, and evaluate
-predictions for, multi-digit number data sets. 
-Each multi-digit number has a single original writer.  Each 
-data set was inspired by a realistic use case in which handwritten
-numbers occur, such as U.S. ZIP Codes, handwritten check amounts, and
-appointment times.  The digits were sampled from the full NIST data
-set of 402,953 digit images.
+predictions for, data sets that contain images of handwritten
+multi-digit numbers.
 
-Writing style varies by writer:
+Each multi-digit number has a single original writer.  The multi-digit
+image is a concatenation of individual digits sampled from the full
+NIST data set of 402,953 single-digit images, while ensuring the
+digits have the same original writer.  
+
+Each MDW data set was inspired by a realistic use case in which
+handwritten numbers occur, such as U.S. ZIP Codes, handwritten check
+amounts, and appointment times.
+
+Images generated this way show that writing style varies by writer.
+For example:
 
 | Writer | Number |
 | ------ | ------ |
@@ -34,7 +42,11 @@ single writer, specify the desired number and writer id:
 python3 create_MDW_image.py <number> <writer>
 ```
 
-Omit the writer id to get a randomly chosen writer.
+* Omit the writer id to get a randomly chosen writer.
+* Use `-s <seed>` to specify the random number generator seed.
+* By default, a random writer is chosen from
+  `resources/writers-all-test.csv`.  See the `-w` option to specify a
+  different source (like `resources/writers-all-train.csv`).
 
 More examples of different writers producing the number 12345: 
 
