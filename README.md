@@ -188,12 +188,7 @@ different geographical biases.
 
 ![SVM geographical bias](images/res-sector-err-SVM.png)
 
-You can reproduce this result (be patient, generating 100 samples per
-region takes a while) with the following command.  Please note, you
-will first need to download the GeoJSON file describing ZIP Code
-boundaries (thanks to John Goodall) from
-[https://github.com/jgoodall/us-maps/blob/master/geojson/zcta5.geo.json](https://github.com/jgoodall/us-maps/blob/master/geojson/zcta5.geo.json)
-.  Save this file in the `resources` directory.
+Use this script to assess geographical bias in predictions:
 
 ```
 python3 exp_geographical_bias.py <MDW_data_file> <preds_file>
