@@ -196,7 +196,7 @@ boundaries (thanks to John Goodall) from
 .  Save this file in the `resources` directory.
 
 ```
-python3 exp_geographical_bias.py
+python3 exp_geographical_bias.py <MDW_data_file> <preds_file>
 ```
 
 ## Other Experiments
