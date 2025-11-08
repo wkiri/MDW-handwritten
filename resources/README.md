@@ -1,6 +1,6 @@
 # Resources for Multi-Digit Writer (MDW) Data Sets
 
-Author: Kiri Wagstaff, wkiri@wkiri.com
+Author: Kiri Wagstaff, https://www.wkiri.com/
 
 ## Writer Lists
 

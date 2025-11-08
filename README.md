@@ -1,6 +1,6 @@
 # Generating Handwritten Multi-Digit Writer (MDW) Number Recognition Data Sets
 
-Author: Kiri Wagstaff, wkiri@wkiri.com 
+Author: Kiri Wagstaff, https://www.wkiri.com/
 
 This repository contains Python scripts to generate, and evaluate
 predictions for, data sets that contain images of handwritten
