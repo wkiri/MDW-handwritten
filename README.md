@@ -179,10 +179,10 @@ evaluated on 10,000 multi-digit samples generated for each domain:
 
 In addition to numeric results, we can use our domain knowledge to
 explore errors in a task-specific way.  For example, we used the first
-two digits to define a geographical region that spans many ZIP Codes,
-then created a per-region test set of 100 randomly generated samples
-from ZIP Codes located in that region. The following figure shows the
-map of ZIP Code error rates per region for the SVM.  We find
+two digits to define a geographical sector that spans many ZIP Codes,
+then calculated the average error for predictions on ZIP Codes
+located in that sector. The following figure shows the
+map of ZIP Code error rates per sector for the SVM.  We find
 high variability across regions, and different classifiers show
 different geographical biases.
 
