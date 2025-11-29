@@ -198,8 +198,8 @@ A plot of the difference in geographical bias between two ZIP Code
 prediction files can be generated using this script:
 
 ```
-% python3 diff_geographical_bias.py $DATA/test_MDW_zip_code.csv \
-          preds-zip-codes-1.csv preds-zip-codes-2.csv
+python3 diff_geographical_bias.py $DATA/test_MDW_zip_code.csv \
+        preds-zip-codes-1.csv preds-zip-codes-2.csv
 ```
 
 ## Other Experiments
