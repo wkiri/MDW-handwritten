@@ -39,7 +39,7 @@ def main(data_file, preds_file, zip_code_file):
 
     err_rate = []
     cname = preds_file.split('-')[-1].split('.')[0]
-    print(cname)
+    print(f'Classifier: {cname}')
     # Error rates based on zip codes in the MDW test file
     errfile = f'zip-code-errors-MDW-sector-{cname}.npz'
     if os.path.exists(errfile):
@@ -90,6 +90,10 @@ def main(data_file, preds_file, zip_code_file):
     err_rate = np.array(err_rate)
     err_sorted = err_rate[np.argsort(err_rate[:,0])].astype(float)
     sector['Err'] = err_sorted[:,1]
+    #print(err_sorted)
+    minsec = np.argmin(err_sorted[:,1])
+    maxsec = np.argmax(err_sorted[:,1])
+    print(f'Sector errors range from {err_sorted[minsec,1]:.4f} (sector {err_sorted[minsec,0]:02.0f}XXX) to {err_sorted[maxsec,1]:.4f} (sector {err_sorted[maxsec,0]:02.0f}XXX)')
 
     #sector.plot(column = 'Err', legend=True, vmin=0.00, vmax=0.16)
     sector.plot(column = 'Err', legend=True, vmin=0.00, vmax=0.12)
