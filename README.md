@@ -137,7 +137,7 @@ digit in the multi-digit number, a single-digit classifier that was
 trained on the MNIST training set.  
 
 ```
-python3 predict_MDW_data.py <MDW_data_file> <preds_file>
+python3 predict_MDW_data.py <MDW_data_file> <preds_file> -c <classifier>
 ```
 
 * By default, this script uses a support vector machine (SVM) with RBF
@@ -192,6 +192,14 @@ Use this script to assess geographical bias in predictions:
 
 ```
 python3 exp_geographical_bias.py <MDW_data_file> <preds_file>
+```
+
+A plot of the difference in geographical bias between two ZIP Code
+prediction files can be generated using this script:
+
+```
+% python3 diff_geographical_bias.py $DATA/test_MDW_zip_code.csv \
+          preds-zip-codes-1.csv preds-zip-codes-2.csv
 ```
 
 ## Other Experiments
