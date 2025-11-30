@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Wagstaff
+    given-names: Kiri
+    orcid: https://orcid.org/0000-0003-4401-5506
+title: "Generating Handwritten Multi-Digit Writer (MDW) Number Recognition Data Sets"
+version: 1.0.0
+date-released: 2025-11-28
+url: "https://github.com/wkiri/MDW-handwritten"
