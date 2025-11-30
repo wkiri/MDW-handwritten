@@ -24,6 +24,12 @@ For example:
 | 1568   | ![12345 by writer 1568](images/number-12345-w1568.png) |
 | 1830   | ![12345 by writer 1830](images/number-12345-w1830.png) |
 
+
+Example benchmark data sets created using this code, with 10,000 items
+each, for U.S. ZIP Codes, handwritten check amounts, and clock times,
+are described below and available at:
+https://www.kaggle.com/datasets/kirilwagstaff/multi-digit-writer-mdw-number-recognition
+
 ## Requirements
 
 This code assumes you have Python 3.9 or higher installed.
@@ -79,6 +85,10 @@ fields:
 
 for a number with N digits.  Each NIST id can be used to index into the
 QMNIST data set to obtain the corresponding 28x28 image.
+
+Three benchmark data sets (one for each domain) that were created
+using this code, with 10,000 items each, are available at:
+https://www.kaggle.com/datasets/kirilwagstaff/multi-digit-writer-mdw-number-recognition
 
 ### U.S. ZIP Codes
 
